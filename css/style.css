@@ -2,6 +2,12 @@
   --background-color: #e5e5e5;
   --main-color: #212121;
   --focus-color: #2196f3;
+  --font-color: #757575;
+  --bg-color-accent:#2f303a;
+  --white-element: #fff;
+  --button-bg: #f5f4fa;
+  --hover-effect: #188ce8;
+
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -24,11 +30,15 @@ button {
 }
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
 }
-p{
-  margin: 0;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
 }
 .container{
   width: 1200px;
@@ -37,6 +47,9 @@ p{
   margin-left: auto;
   margin-right: auto;
   justify-content:center;
+}
+.section{
+  padding: 94px 0px;
 }
 .hdr {
   border-bottom: 1px solid #ECECEC;
@@ -64,7 +77,7 @@ margin-left: 50px;
   padding-bottom: 32px;
 }
 .presence-effect{
-  color: #2196f3;
+  color: var(--focus-color);
 }
 .logo {
   margin-right: 93px;
@@ -95,21 +108,22 @@ margin-left: 50px;
   color: var(--focus-color);
 }
 .link-contact {
-  color: #757575;
+  color: var(--font-color);
 }
 .link-contact :hover,
 .link-contact :focus {
   color: var(--focus-color);
 }
 .hero {
-  background: #2f303a;
+  background: var(--bg-color-accent);
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
 }
 .hero-text {
-  margin-left: 237px;
-  margin-right: 237px;
-  color: #ffffff;
+  width: 696px;
+  margin: 0 auto;
+  color: var(--white-element);
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -119,36 +133,29 @@ margin-left: 50px;
   text-transform: uppercase;
 }
 .hero-button {
-  margin-left: 485px;
-  margin-right: 485px;
+  padding:10px 32px ;
   margin-top: 30px ;
-  background: #2196f3;
-  color: #ffffff;
+  background:var(--focus-color);
+  color: var(--white-element);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
 }
 .hero-button:hover,
 .hero-button:focus {
-  background: #188ce8;
-  color: #ffffff;
+  background: var(--hover-effect);
+  color: var(--white-element);
 }
-.about-us {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .about-cont {
   display: flex;
 }
 
 .about-item {
+  width: 270px;
   margin-right: 30px;
 }
 .about-cont :last-child{
@@ -170,7 +177,10 @@ margin-left: 50px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--font-color);
+}
+.job{
+  padding-top: 0;
 }
 .job-title {
   margin-bottom: 50px;
@@ -193,9 +203,7 @@ margin-left: 50px;
 }
 
 .team {
-  background: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  background: var(--button-bg);
 }
 .team-title {
   color: var(--main-color);
@@ -214,15 +222,17 @@ margin-left: 50px;
   margin-right: 0;
 }
 .team-list{
-  background-color: #ffffff;
+  background-color: var(--white-element);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
 }
+.team-sit {
+  padding: 30px 0;
+}
 .team-member {
-  margin-top: 30px;
   color: var(--main-color);
   font-style: normal;
   font-weight: 500;
@@ -233,17 +243,16 @@ margin-left: 50px;
 }
 .team-position {
   margin-top: 10px;
-  margin-bottom: 30px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--font-color);
 }
 .footer {
-  background: #2f303a;
+  background: var(--bg-color-accent);
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -255,7 +264,7 @@ margin-left: 50px;
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white-element);
 }
 .adress {
   margin-top: 20px;
@@ -264,7 +273,7 @@ margin-left: 50px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color:var(--white-element);
 }
 .link-footer {
   margin-top: 9px;
@@ -280,43 +289,36 @@ margin-left: 50px;
 .link-footer:focus {
   color: var(--focus-color);
 }
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--focus-color);
-}
 
 .profile-button {
-  background: #f5f4fa;
+  background: var(--button-bg);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   border-radius: 4px;
-  /* identical to box height, or 162% */
+  padding: 6px 22px;
 
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color:var(--main-color);
 }
 .presence-effect-button{
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--focus-color);
+  color: var(--white-element);
 }
 .profile-button:hover,
 .profile-button:focus {
   border-radius: 4px;
-  background: #2196f3;
-  color: #ffffff;
+  background: var(--focus-color);
+  color: var(--white-element);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
   0px 1px 2px rgba(0, 0, 0, 0.08),
   0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-.portfolio-list {
-padding-top: 94px;
-padding-bottom: 94px;
-}
+
 .filter {
   display: flex;
   justify-content: center;
@@ -329,6 +331,7 @@ padding-bottom: 94px;
   margin-right: 0;
 }
 .galery {
+  margin-top: -30px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -336,30 +339,30 @@ padding-bottom: 94px;
   width: 370px;
   margin-right: 30px;
   margin-top: 30px;
-  border:1px solid #EEEEEE;
+  
 }
 .filter-item:nth-child(3n) {
   margin-right: 0;
 }
+.galery-item{
+border-left: 1px solid #EEEEEE;
+border-right: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
+padding: 20px 24px;
+}
 .portfolio-list-title {
-  margin-left: 24px;
-  margin-top: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--main-color);
 }
 .portfolio-list-text {
-  margin-left: 24px;
-  margin-bottom: 0;
-  margin-top: 4px;
-  padding-bottom: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--font-color);
 }
